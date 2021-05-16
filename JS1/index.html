@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS1</title>
+    <style>
+        button{
+            margin: 5px;
+            height: 20px;
+            width: auto;
+        }
+    </style>
+    <script type="text/javascript" src="tasks.js"></script>
+    <script type="text/javascript">
+        function task1inline(){
+            let firstNum=prompt("Please enter first positive integer:","");
+            firstNum=parseInt(firstNum);
+            if(firstNum<1)
+            {
+                alert("First number must be positive integer");
+                return;
+            }
+
+            let secondNum=prompt("Please enter second positive integer:","");
+            secondNum=parseInt(secondNum);
+            if(secondNum<1)
+            {
+                alert("Second number must be positive integer");
+                return;
+            }
+
+            let result=0;
+            for(let i=Math.min(firstNum,secondNum); i<=Math.max(firstNum,secondNum); i++)
+            {
+                if(i%2!=0)
+                    result+=i;
+            }
+
+            alert("Result: "+result);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="task1inline()">Task 1 inline</button><br>
+    <button onclick="task1()">Task 1</button><br>
+    <button onclick="task2()">Task 2</button>
+</body>
+</html>
